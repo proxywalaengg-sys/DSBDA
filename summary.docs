@@ -1,0 +1,825 @@
+# Data Science Practicals — Complete Theory Revision Notes
+
+These are short, viva-friendly revision notes for all practicals.
+
+---
+
+# Practical 1 — Data Wrangling I
+
+# MAIN TOPICS
+
+* Data preprocessing
+* Missing values
+* Data formatting
+* Normalization
+* Encoding categorical variables
+
+---
+
+# IMPORTANT THEORY
+
+# Data Wrangling
+
+Process of cleaning and preparing raw data.
+
+---
+
+# Missing Values
+
+Missing/empty data in dataset.
+
+Detected using:
+
+```python id="rev1"
+isnull()
+```
+
+---
+
+# describe()
+
+Provides:
+
+* mean
+* std
+* min
+* max
+* quartiles
+
+---
+
+# Data Types
+
+| Type   | Example    |
+| ------ | ---------- |
+| int    | 10         |
+| float  | 10.5       |
+| object | text       |
+| bool   | True/False |
+
+---
+
+# Normalization
+
+Scaling values into range:
+
+```text id="rev2"
+0 to 1
+```
+
+Formula:
+
+```text id="rev3"
+(x-min)/(max-min)
+```
+
+---
+
+# Encoding
+
+Converting categorical data into numerical form.
+
+Example:
+
+```text id="rev4"
+male → 0
+female → 1
+```
+
+---
+
+# REAL LIFE USE
+
+* ML preprocessing
+* banking
+* healthcare
+
+---
+
+# Practical 2 — Data Wrangling II
+
+# MAIN TOPICS
+
+* Missing values
+* Outlier detection
+* Data transformation
+
+---
+
+# IMPORTANT THEORY
+
+# Inconsistency
+
+Invalid/unrealistic data.
+
+Example:
+
+```text id="rev5"
+Attendance = 110%
+```
+
+---
+
+# Outlier
+
+Extreme unusual value.
+
+Detected using:
+
+# IQR Method
+
+Formula:
+
+```text id="rev6"
+IQR = Q3 - Q1
+```
+
+Outlier range:
+
+```text id="rev7"
+Q1 - 1.5×IQR
+Q3 + 1.5×IQR
+```
+
+---
+
+# Data Transformation
+
+Changing scale/distribution of data.
+
+Example:
+
+* normalization
+* logarithmic transformation
+
+---
+
+# PURPOSE
+
+* reduce skewness
+* improve ML performance
+
+---
+
+# Practical 3 — Descriptive Statistics
+
+# MAIN TOPICS
+
+* Mean
+* Median
+* Standard deviation
+* Percentiles
+* Grouping
+
+---
+
+# IMPORTANT THEORY
+
+# Mean
+
+Average value.
+
+---
+
+# Median
+
+Middle value.
+
+---
+
+# Standard Deviation
+
+Measures spread of data.
+
+Low std:
+data close together.
+
+High std:
+data spread apart.
+
+---
+
+# Percentile
+
+Value below certain percentage.
+
+Example:
+
+```text id="rev8"
+75th percentile
+```
+
+---
+
+# groupby()
+
+Groups data category-wise.
+
+---
+
+# Iris Dataset
+
+Famous ML dataset with:
+
+* setosa
+* versicolor
+* virginica
+
+---
+
+# Practical 4 — Linear Regression
+
+# MAIN TOPICS
+
+* Supervised learning
+* Regression
+* Prediction
+* Model evaluation
+
+---
+
+# IMPORTANT THEORY
+
+# Linear Regression
+
+Predicts continuous numerical values.
+
+Equation:
+
+```text id="rev9"
+y = mx + c
+```
+
+---
+
+# Features
+
+Input variables.
+
+---
+
+# Target Variable
+
+Output variable.
+
+---
+
+# Train-Test Split
+
+* training data
+* testing data
+
+---
+
+# fit()
+
+Trains model.
+
+---
+
+# predict()
+
+Generates predictions.
+
+---
+
+# MSE
+
+Mean Squared Error.
+
+Lower MSE = better model.
+
+---
+
+# R² Score
+
+Model accuracy measure.
+
+Range:
+
+```text id="rev10"
+0 to 1
+```
+
+---
+
+# REAL LIFE USE
+
+* house price prediction
+* sales forecasting
+
+---
+
+# Practical 5 — Logistic Regression
+
+# MAIN TOPICS
+
+* Classification
+* Confusion matrix
+* Accuracy metrics
+
+---
+
+# IMPORTANT THEORY
+
+# Logistic Regression
+
+Classification algorithm.
+
+Used for:
+
+```text id="rev11"
+0 or 1 prediction
+```
+
+---
+
+# Feature Scaling
+
+Brings values into similar range.
+
+Used:
+
+```python id="rev12"
+StandardScaler()
+```
+
+---
+
+# Sigmoid Function
+
+Outputs probability between:
+
+```text id="rev13"
+0 and 1
+```
+
+---
+
+# Confusion Matrix
+
+| Term | Meaning          |
+| ---- | ---------------- |
+| TP   | correct positive |
+| TN   | correct negative |
+| FP   | false positive   |
+| FN   | false negative   |
+
+---
+
+# Accuracy
+
+Correct predictions/total.
+
+---
+
+# Precision
+
+Correct positive predictions.
+
+---
+
+# Recall
+
+Ability to detect positives.
+
+---
+
+# REAL LIFE USE
+
+* spam detection
+* disease prediction
+
+---
+
+# Practical 6 — Naïve Bayes
+
+# MAIN TOPICS
+
+* Probability
+* Bayes theorem
+* Classification
+
+---
+
+# IMPORTANT THEORY
+
+# Naïve Bayes
+
+Probability-based classifier.
+
+---
+
+# Bayes Theorem
+
+```text id="rev14"
+P(A|B)=P(B|A)×P(A)/P(B)
+```
+
+---
+
+# “Naïve”
+
+Assumes features are independent.
+
+---
+
+# GaussianNB
+
+Used for continuous numerical data.
+
+---
+
+# Advantages
+
+* fast
+* simple
+* efficient
+
+---
+
+# REAL LIFE USE
+
+* spam filtering
+* recommendation systems
+
+---
+
+# Practical 7 — Text Analytics
+
+# MAIN TOPICS
+
+* NLP
+* Tokenization
+* Stemming
+* Lemmatization
+* TF-IDF
+
+---
+
+# IMPORTANT THEORY
+
+# NLP
+
+Natural Language Processing.
+
+Helps computers understand language.
+
+---
+
+# Tokenization
+
+Breaking text into tokens.
+
+---
+
+# POS Tagging
+
+Assigning grammatical tags.
+
+Example:
+
+```text id="rev15"
+noun
+verb
+adjective
+```
+
+---
+
+# Stopwords
+
+Common words:
+
+```text id="rev16"
+is
+the
+and
+```
+
+---
+
+# Stemming
+
+Reducing words to root.
+
+Example:
+
+```text id="rev17"
+playing → play
+```
+
+---
+
+# Lemmatization
+
+Converting into dictionary word.
+
+---
+
+# TF
+
+Term Frequency.
+
+---
+
+# IDF
+
+Inverse Document Frequency.
+
+---
+
+# TF-IDF
+
+Measures word importance.
+
+---
+
+# REAL LIFE USE
+
+* ChatGPT
+* search engines
+* sentiment analysis
+
+---
+
+# Practical 8 — Data Visualization I
+
+# MAIN TOPICS
+
+* Seaborn
+* Histogram
+* Countplot
+* EDA
+
+---
+
+# IMPORTANT THEORY
+
+# Data Visualization
+
+Graphical representation of data.
+
+---
+
+# EDA
+
+Exploratory Data Analysis.
+
+---
+
+# Histogram
+
+Shows frequency distribution.
+
+---
+
+# Countplot
+
+Shows categorical counts.
+
+---
+
+# Hue
+
+Separates graph by categories.
+
+---
+
+# Titanic Dataset
+
+Passenger survival dataset.
+
+---
+
+# IMPORTANT OBSERVATIONS
+
+* females survived more
+* fare distribution skewed
+
+---
+
+# Practical 9 — Data Visualization II
+
+# MAIN TOPICS
+
+* Boxplot
+* Quartiles
+* Outliers
+
+---
+
+# IMPORTANT THEORY
+
+# Boxplot
+
+Statistical graph showing:
+
+* median
+* quartiles
+* spread
+* outliers
+
+---
+
+# Quartiles
+
+| Quartile | Meaning |
+| -------- | ------- |
+| Q1       | 25%     |
+| Q2       | median  |
+| Q3       | 75%     |
+
+---
+
+# IQR
+
+```text id="rev18"
+Q3 - Q1
+```
+
+---
+
+# Outliers
+
+Extreme unusual values.
+
+---
+
+# Best Graph for Outliers
+
+# Boxplot
+
+---
+
+# Practical 10 — Data Visualization III
+
+# MAIN TOPICS
+
+* Histograms
+* Boxplots
+* Feature analysis
+* Outliers
+
+---
+
+# IMPORTANT THEORY
+
+# Numerical Features
+
+Numeric values.
+
+Example:
+
+```text id="rev19"
+5.1
+3.5
+```
+
+---
+
+# Nominal Features
+
+Categorical labels.
+
+Example:
+
+```text id="rev20"
+setosa
+```
+
+---
+
+# Histogram
+
+Frequency distribution.
+
+---
+
+# Boxplot
+
+Distribution + outliers.
+
+---
+
+# Outlier Formula
+
+```text id="rev21"
+Q1 - 1.5×IQR
+Q3 + 1.5×IQR
+```
+
+---
+
+# Petal Features
+
+Best for separating iris species.
+
+---
+
+# MOST IMPORTANT OVERALL VIVA QUESTIONS
+
+# Q1. Difference between supervised and unsupervised learning?
+
+| Supervised   | Unsupervised   |
+| ------------ | -------------- |
+| labeled data | unlabeled data |
+
+---
+
+# Q2. Difference between regression and classification?
+
+| Regression        | Classification     |
+| ----------------- | ------------------ |
+| continuous output | categorical output |
+
+---
+
+# Q3. Why preprocessing important?
+
+Improves data quality and ML accuracy.
+
+---
+
+# Q4. Why visualization important?
+
+Helps understand patterns and anomalies.
+
+---
+
+# Q5. What are outliers?
+
+Extreme unusual data values.
+
+---
+
+# Q6. Difference between histogram and boxplot?
+
+| Histogram | Boxplot             |
+| --------- | ------------------- |
+| frequency | statistical summary |
+
+---
+
+# Q7. Difference between stemming and lemmatization?
+
+| Stemming   | Lemmatization   |
+| ---------- | --------------- |
+| crude root | dictionary root |
+
+---
+
+# Q8. What is confusion matrix?
+
+Table for classification evaluation.
+
+---
+
+# Q9. Why split training and testing data?
+
+To evaluate model performance.
+
+---
+
+# Q10. What is normalization?
+
+Scaling data into fixed range.
+
+---
+
+# COMPLETE FLOW OF DATA SCIENCE PRACTICALS
+
+```text id="rev22"
+Data Collection
+↓
+Data Cleaning
+↓
+Data Wrangling
+↓
+Visualization
+↓
+Feature Engineering
+↓
+Model Building
+↓
+Prediction
+↓
+Evaluation
+```
+
+---
+
+# MOST IMPORTANT FINAL REVISION POINTS
+
+| Practical | Core Topic          |
+| --------- | ------------------- |
+| 1         | preprocessing       |
+| 2         | outliers            |
+| 3         | statistics          |
+| 4         | linear regression   |
+| 5         | logistic regression |
+| 6         | naïve bayes         |
+| 7         | NLP                 |
+| 8         | histogram           |
+| 9         | boxplot             |
+| 10        | visualization & EDA |
